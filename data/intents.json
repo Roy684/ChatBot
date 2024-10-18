@@ -1,0 +1,89 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey ",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "AI tool",
+      "patterns": [
+        "I'm looking for an AI tool that can automatically edit my travel vlogs by cutting out unimportant parts.",
+        "I need an AI tool for photo retouching that can smooth skin and remove blemishes.",
+        "I'm searching for an AI video editor that adds subtitles automatically based on the audio.",
+        "I want an AI tool that can create animated transitions between my video clips.",
+        "I need a tool that uses AI to organize my photo library by tagging and categorizing images.",
+        "I'm looking for an AI tool that can stabilize shaky video footage.",
+        "I'm interested in an AI tool that can generate video summaries by extracting key moments.",
+        "I'm interested in AI tools that can transform audios."
+      ],
+      "responses": [
+        "Okay",
+        "Anything else you are looking for?"
+      ]
+    },
+    {
+      "tag": "Questions?",
+      "patterns": [
+        "Can you help me find an AI tool that enhances the resolution of old, low-quality images?",
+        "Do you know of any AI tools that can colorize black and white photos?",
+        "Can you suggest an AI tool that helps with noise reduction in my audio recordings?",
+        "Can you suggest some Ai tool that can separate speech from noise?"
+      ],
+      "responses": [
+        "Yeah sure!",
+        "Sure here are some products."
+      ]
+    },
+    {
+      "tag": "Price related",
+      "patterns": [
+        "Are these tools free?",
+        "Can you tell me if these tools are free or not?",
+        "How much does this tool cost?"
+      ],
+      "responses": [
+        "You can look that up on their official site.",
+        "I don't have that information."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    }
+  ]
+}
