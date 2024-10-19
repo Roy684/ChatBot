@@ -35,34 +35,34 @@ def home():
 @app.route("/chat", methods=["POST"])
 def chat():
     message = request.json["message"]
-#    print(f"Received message: {message}")  # Debug print
+#    print(f"Received message: {message}")  
     sentence = tokenize(message)
-#   print(f"Tokenized message: {sentence}")  # Debug print
+#   print(f"Tokenized message: {sentence}") 
     X = bag_of_words(sentence, all_words)
-#    print(f"Bag of words: {X}")  # Debug print
+#    print(f"Bag of words: {X}")  
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
 
     output = model(X)
-#   print(f"Model output: {output}")  # Debug print
+#   print(f"Model output: {output}")  
     _, predicted = torch.max(output, dim=1)
-#    print(f"Predicted tag index: {predicted.item()}")  # Debug print
+#    print(f"Predicted tag index: {predicted.item()}")  
 
     tag = tags[predicted.item()]
-#   print(f"Predicted tag: {tag}")  # Debug print
+#   print(f"Predicted tag: {tag}") 
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
-#    print(f"Prediction probability: {prob.item()}")  # Debug print
+#    print(f"Prediction probability: {prob.item()}")  
 
     if prob.item() > 0.70:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 response = random.choice(intent['responses'])
-#                print(f"Response: {response}")  # Debug print
+#                print(f"Response: {response}")  
                 return jsonify({"response": response})
     else:
-#       print("Response: I do not understand...")  # Debug print
+#       print("Response: I do not understand...")  
         return jsonify({"response": "I do not understand..."})
     
 if __name__ == "__main__":
